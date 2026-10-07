@@ -1,6 +1,8 @@
 name: Build LaTeX PDF
 
 on:
+  workflow_dispatch: 
+  
   push:
     paths:
       - '**.tex'
@@ -8,6 +10,7 @@ on:
       - '**.sty'
       - '**.cls'
       - 'figures/**'
+      - '.github/workflows/build-latex.yml'
 
 permissions:
   contents: write
