@@ -43,16 +43,16 @@
 \section*{Measurements Using the Camera}
 In this section you want to take some measurements using the Nikon Z 50 II camera. Let's start with the logarithmic lens before repeating the similar steps for the linear lens.
 \begin{enumerate}
-    \item Determine the radius $R$ of the Einstein ring as seen on the paper (at a distance D from the pinhole) in the previous section. Use the formula $r/R=X/D$ to accurately determine $X$, the distance between the camera chip and the pinhole. $r$ is the ring radius in pixels, which can be measured using the code in the provided Python Jupyter notebook. This serves as your calibration relating physical image size to angle. This calibration is only as long as nothing about the setup has moved.
+    \item Determine the radius $R$ of the Einstein ring as seen on the paper (at a distance L from the pinhole) in the previous section. Use the formula $r/R=X/L$ to accurately determine $X$, the distance between the camera chip and the pinhole. $r$ is the ring radius in pixels (meaning $X$ is measured in units of pixels as well), which can be measured using the code in the provided Python Jupyter notebook. This serves as your calibration relating physical image size to angle. This calibration is only as long as nothing about the setup has moved.
     \item Mount the camera behind the pinhole. Make sure you attach the lens mount first since the pinhole protrudes out and can damage the camera. Connect the camera to the computer and open the NX Tether application. Make sure the camera shows up as the connected camera. Every time you take a picture, the photo should save directly to the computer.
     \item Align to get the Einstein ring and move the camera so that the ring is centered on the screen.
     \item Take a picture of the Einstein ring.
     \item Turn off the light source or use a book to block the light source and take a picture that will be used later for background subtraction.
-    \item Change the values of $D_d, D_s, D_{ds}$ measure them, and take more pictures. Measure the ring radius $r$ and use the values of $D_{sc}$ from step (1). Calculate $D=\frac{D_d D_s}{D_{ds}}$, $\theta_E=\arctan\frac{r}{D_{sc}}$ and verify that $\theta_E \propto D^{-1/2}$.
+    \item Change the values of $D_d, D_s, D_{ds}$ measure them, and take more pictures. Measure the ring radius $r$ and use the values of $D_{sc}=X$ from step (1). Calculate $D=\frac{D_d D_s}{D_{ds}}$, $\theta_E=\arctan\frac{r}{D_{sc}}$ and verify that $\theta_E \propto D^{-1/2}$.
     \item Use the Jupyter notebook to measure the ring radius $r$.
     \item Choose one set of values of $D_d, D_s,$ and $D_{ds}$. Move the light source from the axis a distance $\eta$ and take a picture and repeat for several distances of $\eta$. Make sure you measure the $\eta$ values you use.
     \item Use the Jupyter notebook to measure $\delta_+$ and $\delta_-$, the distances between the two images and the center of the Einstein ring.
-    \item Calculate $\theta_E=\arctan\frac{r}{D_{sc}}$, $\beta=\arctan\frac{\eta}{D_s}$, $\theta_+=\arctan{\delta_+}{D_sc}$, $\theta_-=\arctan{\delta_-}{D_{sc}}$. Verify that $\theta_\pm=\frac{1}{2}(\beta\pm\sqrt{\beta^2+4\theta^2_E})$
+    \item Calculate $\theta_E=\arctan\frac{r}{D_{sc}}$, $\beta=\arctan\frac{\eta}{D_s}$, $\theta_+=\arctan{\delta_+}{D_{sc}}$, $\theta_-=\arctan{\delta_-}{D_{sc}}$. Verify that $\theta_\pm=\frac{1}{2}(\beta\pm\sqrt{\beta^2+4\theta^2_E})$
     \item Repeat this 5 times for different positions of the light source and lens, to map out the dependence $\theta_\pm$ on the dimensional parameters. You will want to produce graphs similar to those shown in the \textit{Basic Knowledge} document.
     
 \end{enumerate}
